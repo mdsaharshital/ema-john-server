@@ -51,7 +51,6 @@ async function run() {
       const query = { _id: { $in: ids } };
       const cursor = productCollection.find(query);
       const products = await cursor.toArray();
-      console.log(keys);
       res.send(products);
     });
   } finally {
